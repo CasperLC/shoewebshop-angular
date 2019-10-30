@@ -1,0 +1,15 @@
+<div *ngIf="shoe">
+
+  <h1>{{shoe.productName}} Details</h1>
+  <div>
+    <h2>
+      id: {{shoe.productid}}<br>
+      Color: {{shoe.color}}<br>
+      Type: {{shoe.type}}<br>
+      Size: {{shoe.size}}<br>
+      Price: {{shoe.price}}<br>
+    </h2>
+    <a routerLink="/shoe-update/{{shoe.productid}}"><button class="button">Update</button></a>
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+<h2>All Shoes</h2>
+<div *ngIf="loading">
+  <h2>Loading Items...</h2>
+</div>
+<div *ngIf="!loading">
+<ul class="heroes">
+  <li *ngFor="let shoe of shoes">
+    <a routerLink="/detail/{{shoe.productid}}">
+      <span class="badge">{{shoe.productid}}</span>{{shoe.productName}}
+    </a>
+    <button class="delete" title="Delete item {{shoe.productid}}" (click)="deleteShoe(shoe.productid)">X</button>
+  </li>
+</ul>
+</div>

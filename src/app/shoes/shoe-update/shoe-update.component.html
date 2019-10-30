@@ -1,0 +1,32 @@
+<div *ngIf="loading">
+  <h2>Loading Item..</h2>
+</div>
+<div *ngIf="!loading">
+<form [formGroup]="shoeForm" (ngSubmit)="save()">
+
+  <label>
+    Product Name:
+    <input type="text" formControlName="productName">
+  </label>
+  <label>
+    Size:
+    <input type="number" formControlName="size">
+  </label>
+  <label>
+    Color:
+    <input type="text" formControlName="color">
+  </label>
+  <label>
+    Price:
+    <input type="number" formControlName="price">
+  </label>
+  <label>
+    Type:
+    <input type="text" formControlName="type">
+  </label>
+  <div>
+    <button class="button" type="submit">Save</button>
+  </div>
+
+</form>
+</div>

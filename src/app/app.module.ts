@@ -11,6 +11,9 @@ import { ShoeListComponent } from './shoes/shoe-list/shoe-list.component';
 import { ShoeDetailsComponent } from './shoes/shoe-details/shoe-details.component';
 import { ShoeCreateComponent } from './shoes/shoe-create/shoe-create.component';
 import { ShoeUpdateComponent } from './shoes/shoe-update/shoe-update.component';
+import { AuthenticationService } from './shared/authentication.service';
+import { AuthGuard } from './shared/guards/auth.guard';
+import { ShoeService } from './shared/shoe.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ShoeUpdateComponent } from './shoes/shoe-update/shoe-update.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthenticationService,
+    ShoeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

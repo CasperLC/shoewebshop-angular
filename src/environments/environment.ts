@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://sneaks4u-webshop.azurewebsites.net/api',
+  apiEndpoint: 'https://localhost:44381/api',
 };
 
 /*

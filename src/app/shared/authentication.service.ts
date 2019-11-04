@@ -13,7 +13,7 @@ export class AuthenticationService {
   login(username: string, password: string): Observable<boolean> {
     return this.http.post<any>(`${environment.apiEndpoint}/token`, { username, password })
       .pipe(map(response => {
-        const token = response.token;
+        const token = response && response.token;
         // login successful if there's a jwt token in the response
         if (token) {
           // store username and jwt token in local storage to keep user logged in between page refreshes

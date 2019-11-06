@@ -9,7 +9,6 @@ import {AuthenticationService} from '../../shared/authentication.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   loginForm: FormGroup;
   submitted = false;
   loading = false;
@@ -44,6 +43,7 @@ export class HomeComponent implements OnInit {
       .subscribe(
         success => {
           this.router.navigate(['/']);
+          this.loading = false;
         },
         error => {
           this.errormessage = error.message;

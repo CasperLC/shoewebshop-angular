@@ -8,7 +8,9 @@ import {AuthenticationService} from '../authentication.service';
 })
 
 export class NavbarComponent implements OnInit {
+  constructor() {}
   ngOnInit() {
   }
+
 
 }

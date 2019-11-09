@@ -1,3 +1,4 @@
+import {Order} from './order-model';
 
 
 export interface Shoe {
@@ -7,4 +8,5 @@ export interface Shoe {
   color: string;
   price: number;
   type: string;
+  order?: Order;
 }

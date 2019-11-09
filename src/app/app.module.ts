@@ -14,6 +14,8 @@ import { ShoeUpdateComponent } from './shoes/shoe-update/shoe-update.component';
 import { AuthenticationService } from './shared/authentication.service';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { ShoeService } from './shared/shoe.service';
+import { OrderListComponent } from './orders/order-list/order-list.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ShoeService } from './shared/shoe.service';
     ShoeListComponent,
     ShoeDetailsComponent,
     ShoeCreateComponent,
-    ShoeUpdateComponent
+    ShoeUpdateComponent,
+    OrderListComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { ShoeService } from './shared/shoe.service';
   providers: [
     AuthGuard,
     AuthenticationService,
+    DatePipe,
     ShoeService],
   bootstrap: [AppComponent]
 })

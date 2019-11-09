@@ -6,10 +6,12 @@ import {ShoeDetailsComponent} from './shoes/shoe-details/shoe-details.component'
 import {ShoeCreateComponent} from './shoes/shoe-create/shoe-create.component';
 import {ShoeUpdateComponent} from './shoes/shoe-update/shoe-update.component';
 import {AuthGuard} from './shared/guards/auth.guard';
+import {OrderListComponent} from './orders/order-list/order-list.component';
 
 
 const routes: Routes = [
   { path: 'shoes', component: ShoeListComponent, canActivate: [AuthGuard] },
+  { path: 'orders', component: OrderListComponent, canActivate: [AuthGuard] },
   { path: 'shoe-create', component: ShoeCreateComponent, canActivate: [AuthGuard] },
   { path: 'shoe-update/:id', component: ShoeUpdateComponent, canActivate: [AuthGuard] },
   { path: 'detail/:id', component: ShoeDetailsComponent, canActivate: [AuthGuard] },

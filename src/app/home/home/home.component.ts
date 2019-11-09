@@ -22,15 +22,15 @@ export class HomeComponent implements OnInit {
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
-
-    // reset login status
-    this.authenticationService.logout();
   }
   // Getters for easy access to form fields
   get username() { return this.loginForm.get('username'); }
   get password() { return this.loginForm.get('password'); }
 
   onSubmit() {
+    // reset login status
+    this.authenticationService.logout();
+
     this.submitted = true;
 
     // stop here if form is invalid

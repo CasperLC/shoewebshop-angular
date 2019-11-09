@@ -1,0 +1,14 @@
+<h2>All Orders</h2>
+<div *ngIf="loading">
+  <h2>Loading Items...</h2>
+</div>
+<div *ngIf="!loading">
+  <ul class="heroes">
+    <li *ngFor="let order of orders">
+      <a routerLink="/detail/{{order.orderId}}">
+        <span class="badge">{{order.orderId}}</span>{{order.orderDateShow}}
+      </a>
+      <button class="delete" title="Delete item {{order.orderId}}" (click)="deleteOrder(order.orderId)">X</button>
+    </li>
+  </ul>
+</div>

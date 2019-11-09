@@ -17,7 +17,8 @@ export class ShoeListComponent implements OnInit {
     this.shoeService.getShoes().
       subscribe(shoes => {
         this.loading = false;
-        this.shoes = shoes;});
+        this.shoes = shoes;
+      });
   }
   deleteShoe(id: number) {
     this.shoeService.deleteShoe(id)

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://clc-shoe-website.azurewebsites.net/api'
+  apiEndpoint: 'http://clc-fullshop.azurewebsites.net/api'
   // apiEndpoint: 'https://localhost:44381/api',
 };
 

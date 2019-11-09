@@ -8,4 +8,5 @@ export interface Order {
   shoeList?: Shoe[];
   user?: User;
   activeOrder: boolean;
+  orderDateShow: string; // used for presentable order date for users until better method found
 }

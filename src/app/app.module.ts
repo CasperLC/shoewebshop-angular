@@ -16,6 +16,7 @@ import { AuthGuard } from './shared/guards/auth.guard';
 import { ShoeService } from './shared/shoe.service';
 import { OrderListComponent } from './orders/order-list/order-list.component';
 import { DatePipe } from '@angular/common';
+import { OrderCreateComponent } from './orders/order-create/order-create.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DatePipe } from '@angular/common';
     ShoeDetailsComponent,
     ShoeCreateComponent,
     ShoeUpdateComponent,
-    OrderListComponent
+    OrderListComponent,
+    OrderCreateComponent
   ],
   imports: [
     BrowserModule,

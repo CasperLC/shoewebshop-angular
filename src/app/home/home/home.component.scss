@@ -1,41 +1,33 @@
-input[type=text], [type=password], [type=number], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+.loginBorder {
+  margin-top: 10%;
+  padding: 10px;
+  border: 2px solid !important;
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.darkBorder {
+  border: 2px solid !important;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+.darkBackground {
+  background-color: rgba(25,25,25,0.6) !important;
 }
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+.errorBackground {
+  background-color: rgba(115,0,0,0.6);
 }
 
-.button {
-  background-color: #333333;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.backgroundAttempt {
+  background-image: url("images/backgroundtest.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
 }
+
+.fillHeight {
+  min-height: 100vh !important;
+}
+
+.whiteText {
+  color: #f2f2f2;
+}
+

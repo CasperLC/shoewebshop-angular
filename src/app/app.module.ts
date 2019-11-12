@@ -23,6 +23,7 @@ import { UserListComponent } from './users/user-list/user-list.component';
 import { UserCreateComponent } from './users/user-create/user-create.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
 import { UserUpdateComponent } from './users/user-update/user-update.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { UserUpdateComponent } from './users/user-update/user-update.component';
     AuthGuard,
     AuthenticationService,
     DatePipe,
+    NgbModule,
     ShoeService],
   bootstrap: [AppComponent]
 })

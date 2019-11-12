@@ -1,0 +1,14 @@
+<h2>All Users</h2>
+<div *ngIf="loading">
+  <h2>Loading Items...</h2>
+</div>
+<div *ngIf="!loading">
+  <ul class="heroes">
+    <li *ngFor="let user of users">
+      <a routerLink="/user-detail/{{user.id}}">
+        <span class="badge">{{user.id}}</span>{{user.username}}
+      </a>
+      <button class="delete" title="Delete item {{user.id}}" (click)="deleteUser(user.id)">X</button>
+    </li>
+  </ul>
+</div>

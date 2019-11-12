@@ -1,0 +1,17 @@
+<div *ngIf="user">
+  <h1>User {{user.username}} Details</h1>
+  <div>
+    <h2>
+      User Id: {{user.id}}<br>
+      Username: {{user.username}}<br>
+      Admin: {{user.isAdmin}}<br>
+    </h2>
+    <ul>
+      <li *ngFor="let order of user.orderList">
+        {{order.orderDate}}<br>
+        id: {{order.orderId}}<br>
+      </li><br>
+    </ul>
+    <a routerLink="/user-update/{{user.id}}"><button class="button">Update</button></a>
+  </div>
+</div>

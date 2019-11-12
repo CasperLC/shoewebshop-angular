@@ -1,0 +1,27 @@
+<div>
+  <form [formGroup]="userForm" (ngSubmit)="save()">
+
+    <label>
+      Username:
+      <input type="text" formControlName="username">
+    </label>
+    <label>
+      Password:
+      <input type="password" formControlName="password">
+    </label>
+    <label>
+      Admin:
+      <input type="checkbox" formControlName="isAdmin">
+    </label>
+    <br>
+    <br>
+      <label>
+        Order Id:
+        <input type="number" formControlName="orderId">
+      </label>
+    <div>
+      <button class="button" type="submit">Save</button>
+    </div>
+
+  </form>
+</div>

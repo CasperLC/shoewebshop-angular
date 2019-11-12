@@ -1,0 +1,21 @@
+<div *ngIf="order">
+  <h1>Order {{order.orderId}} Details</h1>
+  <div>
+    <h2>
+      Order Id: {{order.orderId}}<br>
+      Active Order: {{order.activeOrder}}<br>
+      Order Date: {{order.orderDateShow}}<br>
+    </h2>
+    <ul>
+      <li *ngFor="let shoe of order.shoeList">
+        {{shoe.productName}}<br>
+        id: {{shoe.productid}}<br>
+        Color: {{shoe.color}}<br>
+        Type: {{shoe.type}}<br>
+        Size: {{shoe.size}}<br>
+        Price: {{shoe.price}}<br>
+      </li><br>
+    </ul>
+    <a routerLink="/order-update/{{order.orderId}}"><button class="button">Update</button></a>
+  </div>
+</div>

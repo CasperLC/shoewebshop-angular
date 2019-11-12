@@ -17,6 +17,12 @@ import { ShoeService } from './shared/shoe.service';
 import { OrderListComponent } from './orders/order-list/order-list.component';
 import { DatePipe } from '@angular/common';
 import { OrderCreateComponent } from './orders/order-create/order-create.component';
+import { OrderDetailComponent } from './orders/order-detail/order-detail.component';
+import { OrderUpdateComponent } from './orders/order-update/order-update.component';
+import { UserListComponent } from './users/user-list/user-list.component';
+import { UserCreateComponent } from './users/user-create/user-create.component';
+import { UserDetailComponent } from './users/user-detail/user-detail.component';
+import { UserUpdateComponent } from './users/user-update/user-update.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { OrderCreateComponent } from './orders/order-create/order-create.compone
     ShoeCreateComponent,
     ShoeUpdateComponent,
     OrderListComponent,
-    OrderCreateComponent
+    OrderCreateComponent,
+    OrderDetailComponent,
+    OrderUpdateComponent,
+    UserListComponent,
+    UserCreateComponent,
+    UserDetailComponent,
+    UserUpdateComponent
   ],
   imports: [
     BrowserModule,

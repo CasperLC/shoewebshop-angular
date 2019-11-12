@@ -44,7 +44,7 @@ export class OrderService {
       httpOptions.headers.set('Authorization', 'Bearer ' + this.authService.getToken());
 
     const url = `${this.apiUrl}/${order.orderId}`;
-    return this.http.put<Order>(url, order);
+    return this.http.put<Order>(url, order, httpOptions);
   }
   deleteOrder(id: number): Observable<any> {
     httpOptions.headers =

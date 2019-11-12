@@ -43,7 +43,7 @@ export class UserService {
       httpOptions.headers.set('Authorization', 'Bearer ' + this.authService.getToken());
 
     const url = `${this.apiUrl}/${user.id}`;
-    return this.http.put<User>(url, user);
+    return this.http.put<User>(url, user, httpOptions);
   }
   deleteUser(id: number): Observable<any> {
     httpOptions.headers =

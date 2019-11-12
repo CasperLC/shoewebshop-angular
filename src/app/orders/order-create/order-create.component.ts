@@ -43,7 +43,7 @@ export class OrderCreateComponent implements OnInit {
             type: this.shoe.type,
             size: this.shoe.size,
             price: this.shoe.price,
-            color: this.shoe.color
+            color: this.shoe.color,
           }],
         };
         this.orderService.addOrder(order as Order).

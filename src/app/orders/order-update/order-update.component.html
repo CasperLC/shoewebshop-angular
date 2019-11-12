@@ -1,0 +1,22 @@
+<div>
+  <form [formGroup]="orderForm" (ngSubmit)="save()">
+
+    <label>
+      <p *ngIf="currentDate">Order Date: (current: {{currentDate}})</p>
+      <input type="date" formControlName="orderDate">
+    </label>
+    <label>
+      Active Order:
+      <input type="checkbox" formControlName="activeOrder">
+    </label>
+    <br>
+    <label>
+      Shoe Id:
+      <input type="number" formControlName="productid">
+    </label>
+    <div>
+      <button class="button" type="submit">Save</button>
+    </div>
+
+  </form>
+</div>

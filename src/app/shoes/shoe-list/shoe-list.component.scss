@@ -5,6 +5,17 @@
   padding: 0;
   width: 15em;
 }
+.darkBorder {
+  border: 2px solid !important;
+}
+
+.darkBackground {
+  background-color: rgba(25,25,25,0.6) !important;
+}
+.errorBackground {
+  background-color: rgba(115,0,0,0.6);
+  border: rgba(200,0,0,0.9) 2px solid !important;
+}
 .heroes li {
   position: relative;
   cursor: pointer;

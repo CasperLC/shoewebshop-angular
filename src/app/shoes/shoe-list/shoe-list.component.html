@@ -1,9 +1,19 @@
-<h2>All Shoes</h2>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+<h2 class="text-white">All Shoes</h2>
 <div *ngIf="loading">
   <h2>Loading Items...</h2>
 </div>
-<div *ngIf="!loading">
-<ul class="heroes">
+  </div>
+<div class="row justify-content-center" *ngIf="!loading">
+  <div routerLink="/detail/{{shoe.productid}}" *ngFor="let shoe of shoes" class="col col-lg-3 card m-2 darkBackground darkBorder">
+    <div class="card-body">
+      <h5 class="card-title text-white">{{shoe.productName}}</h5>
+      <p class="card-text text-white">Id: {{shoe.productid}}</p>
+      <button class="btn btn-warning float-right errorBackground text-white" title="Delete item {{shoe.productid}}" (click)="deleteShoe(shoe.productid)">X</button>
+    </div>
+  </div>
+<ul *ngIf="0===1" class="heroes">
   <li *ngFor="let shoe of shoes">
     <a routerLink="/detail/{{shoe.productid}}">
       <span class="badge">{{shoe.productid}}</span>{{shoe.productName}}
@@ -11,4 +21,5 @@
     <button class="delete" title="Delete item {{shoe.productid}}" (click)="deleteShoe(shoe.productid)">X</button>
   </li>
 </ul>
+</div>
 </div>
